@@ -1,0 +1,13 @@
+---
+extends: default
+
+ignore: |
+  .github/workflows/
+rules:
+  document-start:
+    ignore: |
+      **/kustomization.yaml
+  indentation:
+    # This is a workaround for kustomization.yaml not being indented properly
+    # and when using kustomize edit, it changes formatting
+    indent-sequences: consistent
